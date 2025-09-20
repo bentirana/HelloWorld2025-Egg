@@ -1,10 +1,12 @@
+import asyncio
 import requests
 import json
+from datetime import date
 
-# Define the endpoint URL
-url = "https://api.hfs.purdue.edu/menus/v2/locations/Hillenbrand/2025-09-21"
+async def fetch_and_convert(location: str, date: date) -> dict:
+    url = f'https://api.hfs.purdue.edu/menus/v2/locations/{location}/{date.strftime("%Y-%m-%d")}'
+    # print(date.strftime("%Y-%m-%d"))
 
-def fetch_and_convert() -> dict:
     try:
         # Fetch the JSON data from the endpoint
         response = requests.get(url)
@@ -20,7 +22,7 @@ def fetch_and_convert() -> dict:
         json_string = json.dumps(json_data, indent=4)
 
         # Print the formatted JSON data
-        print(json_string)
+        # print(json_string)
 
         # Optionally, save the JSON data to a file
         with open("output.json", "w") as json_file:
@@ -33,6 +35,9 @@ def fetch_and_convert() -> dict:
     except Exception as e:
         print(f"Error processing data: {e}")
 
+def main():
+    data = fetch_and_convert()
+    print(data["Location"])
+
 if __name__ == "__main__":
-    print(fetch_and_convert()["Meals"][0]["Name"])
-    print(fetch_and_convert()["Location"])
+    main()
