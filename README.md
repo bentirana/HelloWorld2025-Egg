@@ -1,4 +1,4 @@
-# HelloWorld2025-Egg
+# REST API Wrapper for Purdue Menu's API
 
 A FastAPI web service that provides easy access to Purdue University dining hall menu data.
 
