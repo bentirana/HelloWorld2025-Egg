@@ -127,12 +127,3 @@ This is a HelloWorld2025 submission project. For any questions or suggestions, p
 ## License
 
 This project is created for educational purposes as part of HelloWorld2025.
-
-## Future Enhancements
-
-- 🔍 **Menu Search**: Search for specific food items across locations
-- 📊 **Nutrition Data**: Include nutritional information when available
-- 🕒 **Meal Period Filtering**: Filter by breakfast, lunch, or dinner
-- 📱 **Mobile-friendly Interface**: Add a simple web interface
-- 🗄️ **Database Integration**: Store historical menu data
-- 🔔 **Notifications**: Alert users about favorite menu items
